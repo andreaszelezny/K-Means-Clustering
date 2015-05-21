@@ -1,2 +1,7 @@
 # K-Means-Clustering
-K-means and Kernel K-means in F#
+
+Implementation of the following clustering algorithms: K-means and Kernel K-means.
+Implementation of the following supervised clustering evaluation metrics: purity and normalized mutual information (NMI).
+
+Input data: multidimensional data points as space separated values.
+
