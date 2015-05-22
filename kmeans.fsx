@@ -91,13 +91,13 @@ module SupervisedEvaluation =
                 p.[ci, j] <- prob
                 pc.[ci] <- pc.[ci] + prob
                 pt.[j] <- pt.[j] + prob))
-        let hc = Array.sumBy (fun x -> -x * System.Math.Log(x)) pc
-        let ht = Array.sumBy (fun x -> -x * System.Math.Log(x)) pt
+        let hc = Array.sumBy (fun x -> -x * Math.Log(x)) pc
+        let ht = Array.sumBy (fun x -> -x * Math.Log(x)) pt
         let mutable ict = 0.
         for i = 0 to r-1 do
             for j = 0 to k-1 do
                 let v = p.[i,j]/(pc.[i]*pt.[j])
-                if v > 0. then ict <- ict + p.[i,j] * System.Math.Log(v)
+                if v > 0. then ict <- ict + p.[i,j] * Math.Log(v)
         ict / sqrt (hc*ht)
 
 module KernelKMeans =
